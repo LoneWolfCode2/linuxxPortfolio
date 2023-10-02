@@ -38,7 +38,7 @@
 }
 
 .animate-in {
-  animation: animateIn 3s ease-in-out;
+  animation: animateIn 300ms ease-in-out;
 }
 
 @keyframes animateIn {
@@ -50,4 +50,21 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animate-out{
+  animation: animateOut 3s ease-out;
+}
+
+@keyframes animateOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    100% {
+        opacity: 0;
+        transform: translateY(-200);
+      }
+    
+    
 }
