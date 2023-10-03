@@ -66,3 +66,110 @@
     transform: translateY(-200);
   }
 }
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 999px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #575ef8;
+}
+
+.slider::-moz-range-thumb:hover {
+  background: #575ef8;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #444cf7; /* blue background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 999px;
+}
+/*and -moz- (Firefox) to override default look)*/
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #444cf7; /* blue background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.svg-indicator {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+}
+.svg-indicator-track,
+.svg-indicator-indication {
+  cx: 50px;
+  cy: 50px;
+  r: 40px;
+  fill: transparent;
+  stroke-width: 10px;
+}
+
+.svg-indicator-track {
+  stroke: #7c82f9;
+  filter: drop-shadow(0px 0px 2px rgb(255 255 255 / 0.2));
+}
+.svg-indicator-indication {
+  stroke: #444cf7;
+  stroke-dasharray: 251.2px;
+}
+
+.svg-linear-indicator {
+  width: 300px;
+  height: 100px;
+}
+
+.switch {
+  width: 50px;
+  height: 20px;
+  background: #7c82f9;
+  margin: 20px auto;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.switch label {
+  display: block;
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -1px;
+  left: -3px;
+  background: #444cf7;
+}
+
+.switch input[type="checkbox"]:checked + label {
+  left: 37px;
+}

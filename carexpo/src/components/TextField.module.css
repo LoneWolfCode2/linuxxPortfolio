@@ -42,7 +42,7 @@
   bottom: 0;
   transform: scaleX(0);
   transition: transform 0.2s ease-in;
-  border-bottom: 2px solid #0b9ce0;
+  border-bottom: 2px solid #6970f9;
 }
 
 .standard__input input:focus ~ .underline__tf {
@@ -52,5 +52,5 @@
   border-bottom: 2px solid var(--main-white);
 }
 .standard__input input:focus ~ label {
-  color: #0b9ce0 !important;
+  color: #6970f9 !important;
 }
