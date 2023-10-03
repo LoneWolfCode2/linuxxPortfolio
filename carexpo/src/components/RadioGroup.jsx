@@ -2,8 +2,6 @@ import React from "react";
 import Radio from "./Radio";
 
 function RadioGroup({ options, name }) {
-  console.log(name);
-
   return (
     <>
       <ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -22,6 +20,4 @@ function RadioGroup({ options, name }) {
 }
 
 export default RadioGroup;
-// <div class="flex items-center mb-4">
-//
-// </div>
+

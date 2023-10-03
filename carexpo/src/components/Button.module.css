@@ -5,6 +5,11 @@
   border-radius: 1.5rem;
   overflow: hidden;
 }
+
+.button__button:active > .button__transition {
+  background-color: #1b1e63;
+}
+
 .button__transition {
   transition: all 0.3s ease-in;
   opacity: 1;
@@ -18,7 +23,6 @@
 }
 .button__button:hover > .button__transition {
   opacity: 0.4;
-  /* right: 0; */
   width: 100%;
 }
 

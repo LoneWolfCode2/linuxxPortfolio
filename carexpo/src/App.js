@@ -12,9 +12,17 @@ import Radio from "./components/Radio";
 import Rating from "./components/Rating";
 import Avatar from "./components/Avatar";
 import TextField from "./components/TextField";
+import ToggleButtonGroup from "./components/ToggleButtonGroup";
+import FormatLeftIcon from "./components/FormatLeftIcon";
+import ToggleButton from "./components/ToggleButton";
 
 function App() {
   const [first, setfirst] = useState(false);
+  const [alignment, setAlignment] = useState("left");
+
+  const handleAlignment = (event) => {
+    setAlignment(event);
+  };
 
   return (
     <div className="App absolute w-full h-fit -z-20 dark:bg-slate-900 min-h-screen flex items-start p-8 justify-center">
@@ -77,6 +85,22 @@ function App() {
         </Avatar>
         <TextField id label="Please enter some text" variant />
         <TextField id label="Email" variant />
+        <ToggleButtonGroup
+          value={alignment}
+          exclusive
+          onChange={handleAlignment}
+          aria-label="text-alignment"
+        >
+          <ToggleButton value="left" aria-label="left aligned">
+            <FormatLeftIcon />
+          </ToggleButton>
+          <ToggleButton value="center" aria-label="left aligned">
+            <FormatLeftIcon />
+          </ToggleButton>
+          <ToggleButton value="right" aria-label="left aligned">
+            <FormatLeftIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
       </div>
       <AnimatePresence>
         {first && (
