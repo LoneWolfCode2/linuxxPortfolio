@@ -10,12 +10,14 @@ import FAB from "./components/FAB";
 import RadioGroup from "./components/RadioGroup";
 import Radio from "./components/Radio";
 import Rating from "./components/Rating";
+import Avatar from "./components/Avatar";
+import TextField from "./components/TextField";
 
 function App() {
   const [first, setfirst] = useState(false);
 
   return (
-    <div className="App dark:bg-slate-900 min-h-screen flex items-start p-8 justify-center">
+    <div className="App absolute w-full h-fit -z-20 dark:bg-slate-900 min-h-screen flex items-start p-8 justify-center">
       <Button
         onClick={() => {
           setfirst(!first);
@@ -63,6 +65,17 @@ function App() {
           options={["US Military", "US Passport"]}
         />
         <Rating value={2} />
+        <Avatar alt="something alt" sx={{ backgroundColor: "red" }}>
+          OP
+        </Avatar>
+        <Avatar
+          alt="something alt"
+          src="https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+        />
+        <Avatar variant="square" alt="something alt">
+          io
+        </Avatar>
+        <TextField id label="This is a placeholder" variant />
       </div>
       <AnimatePresence>
         {first && (
