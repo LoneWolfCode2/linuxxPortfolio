@@ -1,47 +1,56 @@
-.form__group {
+.standard__input {
   position: relative;
-  padding: 15px 0 0;
-  margin-top: 10px;
 }
 
-.form__field {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid #d2d2d2;
-  outline: 0;
-  font-size: 16px;
-  color: #212121;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
+.standard__input input {
+  color: var(--main-white);
+  height: 4rem;
+  border: none;
+  border-bottom: 1px solid var(--main-grey);
+  background-color: var(--main-dark-grey);
+  padding-left: 20px;
+  font-size: 20px;
+  transition: 0.1s ease;
+  outline: none;
+  box-sizing: border-box;
 }
 
-.form__field::placeholder {
-  color: transparent;
-}
-
-.form__field:placeholder-shown ~ .form__label {
-  font-size: 16px;
-  cursor: text;
-  top: 20px;
-}
-
-label,
-.form__field:focus ~ .form__label {
+.standard__input label {
   position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 12px;
-  color: #9b9b9b;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  transition: 0.2s all ease-in;
+  font-size: 1.5rem;
+  pointer-events: none;
+  padding: 0 5px;
 }
 
-.form__field:focus ~ .form__label {
-  color: #009788;
+.standard__input input:not(:placeholder-shown) ~ label,
+.standard__input input:focus ~ label {
+  top: 0px;
+  left: 10px;
+  font-size: 1rem;
 }
 
-.form__field:focus {
-  padding-bottom: 6px;
-  border-bottom: 2px solid #009788;
+.standard__input .underline__tf {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in;
+  border-bottom: 2px solid #0b9ce0;
+}
+
+.standard__input input:focus ~ .underline__tf {
+  transform: scaleX(1);
+}
+.standard__input input:hover {
+  border-bottom: 2px solid var(--main-white);
+}
+.standard__input input:focus ~ label {
+  color: #0b9ce0 !important;
 }

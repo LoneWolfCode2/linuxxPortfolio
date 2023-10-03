@@ -75,7 +75,8 @@ function App() {
         <Avatar variant="square" alt="something alt">
           io
         </Avatar>
-        <TextField id label="This is a placeholder" variant />
+        <TextField id label="Please enter some text" variant />
+        <TextField id label="Email" variant />
       </div>
       <AnimatePresence>
         {first && (
@@ -83,6 +84,12 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            style={{
+              position: "absolute",
+              top: 16,
+              left: "auto",
+              right: "auto",
+            }}
             transition={{ duration: 0.3 }}
           >
             <Alert type="danger" title="Danger" message="message" />
