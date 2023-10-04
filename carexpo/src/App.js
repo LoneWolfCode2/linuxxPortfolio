@@ -13,6 +13,7 @@ import ToggleButtonGroup from "./components/ToggleButtonGroup";
 import FormatLeftIcon from "./components/FormatLeftIcon";
 import ToggleButton from "./components/ToggleButton";
 import SelectOption from "./components/SelectOption";
+import IconButton from "./components/IconButton";
 import TextField from "./components/TextField";
 import Switch from "./components/Switch";
 import LinearProgress from "./components/LinearProgress";
@@ -29,6 +30,7 @@ import ListItem from "./components/ListItem";
 import ListItemIcon from "./components/ListItemIcon";
 import ListItemButton from "./components/ListItemButton";
 import ListItemText from "./components/ListItemText";
+import Tooltip from "./components/Tooltip";
 
 function App() {
   const [first, setfirst] = useState(false);
@@ -221,6 +223,11 @@ function App() {
             <ListItemText primary="Drafts" />
           </ListItem>
         </List>
+        <Tooltip title="This is a long type of tool tip">
+          <IconButton>
+            <TrashCanIcon />
+          </IconButton>
+        </Tooltip>
       </div>
       <AnimatePresence>
         {first && (
