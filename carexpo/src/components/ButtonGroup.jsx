@@ -2,7 +2,7 @@ import React from "react";
 
 function ButtonGroup({ children }) {
   return (
-    <div class="inline-flex   shadow-sm" role="group">
+    <div class="inline-flex shadow-sm" role="group">
       {children.map((child, index) => {
         return (
           <button

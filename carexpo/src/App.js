@@ -15,10 +15,20 @@ import TextField from "./components/TextField";
 import ToggleButtonGroup from "./components/ToggleButtonGroup";
 import FormatLeftIcon from "./components/FormatLeftIcon";
 import ToggleButton from "./components/ToggleButton";
+import List from "./components/List";
+import ListItem from "./components/ListItem";
+import ListItemIcon from "./components/ListItemIcon";
+import ListItemButton from "./components/ListItemButton";
+import ListItemText from "./components/ListItemText";
 
 function App() {
   const [first, setfirst] = useState(false);
   const [alignment, setAlignment] = useState("left");
+  const [selectedIndex, setSelectedIndex] = useState(1);
+
+  const handleListItemClick = (event, index) => {
+    setSelectedIndex(index);
+  };
 
   const handleAlignment = (event) => {
     setAlignment(event);
@@ -101,6 +111,38 @@ function App() {
             <FormatLeftIcon />
           </ToggleButton>
         </ToggleButtonGroup>
+        <List>
+          <ListItem>
+            <ListItemButton
+              selected={selectedIndex === 0}
+              onClick={(e) => handleListItemClick(e, 0)}
+            >
+              <ListItemIcon>
+                <FormatLeftIcon />
+              </ListItemIcon>
+              <ListItemText primary="Inbox" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem>
+            <ListItemButton
+              selected={selectedIndex === 1}
+              onClick={(e) => handleListItemClick(e, 1)}
+            >
+              <ListItemIcon>
+                <FormatLeftIcon />
+              </ListItemIcon>
+              <ListItemText primary="Inbox" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem>
+            <ListItemIcon>
+              <FormatLeftIcon />
+            </ListItemIcon>
+            <ListItemText primary="Drafts" />
+          </ListItem>
+        </List>
       </div>
       <AnimatePresence>
         {first && (

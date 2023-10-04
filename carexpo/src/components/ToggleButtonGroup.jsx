@@ -2,7 +2,9 @@ import React from 'react'
 
 function ToggleButtonGroup({ children, value, onChange, aria_label, }) {
     const handleChange = (e, newItem) => {
+        console.log(e, newItem, value);
         onChange(newItem)
+
     }
     return (
         <div className='flex text-white'>{
